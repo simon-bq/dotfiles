@@ -1,6 +1,6 @@
 -- Setup installer & lsp configs
 require("nvim-lsp-installer").setup {
-  ensure_installed = { "bashls", "cssls", "eslint", "html", "jsonls", "sumneko_lua", "tsserver", "svelte", "tailwindcss" },
+  ensure_installed = { "rust_analyzer", "bashls", "cssls", "eslint", "html", "jsonls", "sumneko_lua", "tsserver", "svelte", "tailwindcss" },
   automatic_installation = true,
 }
 
@@ -85,7 +85,7 @@ lspconfig.tailwindcss.setup {
   settings = require('lsp.servers.tailwindcss').settings,
 }
 
-for _, server in ipairs { "bashls", "cssls", "html", "svelte"} do
+for _, server in ipairs { "bashls", "cssls", "html", "svelte", "rust_analyzer"} do
   lspconfig[server].setup {
     on_attach = on_attach,
     capabilities = capabilities,
