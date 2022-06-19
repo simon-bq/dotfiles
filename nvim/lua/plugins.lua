@@ -4,6 +4,7 @@ return require('packer').startup(function()
   use { 'lewis6991/impatient.nvim' }
   use { 'nvim-lua/plenary.nvim' }
   use { 'morhetz/gruvbox' }
+  use { 'NLKNguyen/papercolor-theme'}
   use { 'tpope/vim-fugitive', config = "require('vim-fugitive')" }
   use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' }, event = "BufRead", config = "require('_gitsigns')" }
   use { 'tpope/vim-surround' }
